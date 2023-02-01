@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container m-48">
+        <h1>Background Color : <span id="color-name"></span> </h1>
+        <div id="btn" class="border-2 border-indigo-500 w-48">Click Me</div>
+        <div id="btn-auto" class="border-2 border-indigo-500 w-48">Automatic</div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        document.getElementById("btn").addEventListener("click", changeColor);
+        document.getElementById("btn-auto").addEventListener("click", autoColor);
+        var check=0;
+        var y;
+        function autoColor(){
+           if(check==0){
+            y = setInterval(changeColor,1000);  
+            check = check + 1;
+           }
+           else{
+            clearInterval(y);
+            check = check - 1;
+           }
+        }
+        
+        function changeColor() {
+            const colorArr = ["red", "green", "blue", "yellow", "black", "white"];
+            let x = Math.floor(Math.random() * 5);
+            document.body.style.backgroundColor = colorArr[x];
+            document.getElementById("color-name").innerHTML = colorArr[x];
+        }
+    </script>
+</body>
+
+</html>
