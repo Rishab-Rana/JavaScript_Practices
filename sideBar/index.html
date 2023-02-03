@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="overflow-hidden">
+    <div class="Nav-bar flex justify-around py-5 bg-indigo-500 text-white z-1">
+        <div class="nav-icon">
+            <h1>NAVIGATION BAR</h1>
+        </div>
+        <div class="nav-list max-sm:hidden">
+            <ul class="flex ">
+                <li class="mx-5">HOME</li>
+                <li class="mx-5">ABOUT</li>
+                <li class="mx-5">PROJECT</li>
+                <li class="mx-5">CONTACT</li>
+            </ul>
+        </div>
+        <h1 id="nav-icon" class="nav-icon max-sm:flex hidden border-5 bg-white text-indigo-500 rounded-full p-2">#</h1>
+    </div>
+    <div id="mobile-nav-list" class="mobile-nav-list bg-indigo-500 text-white hidden">
+        <ul class="flex flex-col m-auto text-center">
+            <li class="w-full my-5 p-5 ease-in-out hover:ease-in duration-300 hover:bg-white hover:text-indigo-500">HOME</li>
+            <li class="w-full my-5 p-5 ease-in-out hover:ease-in duration-300 hover:bg-white hover:text-indigo-500">ABOUT</li>
+            <li class="w-full my-5 p-5 ease-in-out hover:ease-in duration-300 hover:bg-white hover:text-indigo-500">PROJECT</li>
+            <li class="w-full my-5 p-5 ease-in-out hover:ease-in duration-300 hover:bg-white hover:text-indigo-500">CONTACT</li>
+        </ul>
+    </div>
+    <Script src="index.js"></Script>
+</body>
+</html>
